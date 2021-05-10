@@ -1,0 +1,15 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Promotion extends Model
+{
+    protected $table = "promotions";
+
+     public function bill(){
+    	return $this->hasMany('App\Bill','id_promotion','id');
+    }
+
+}
